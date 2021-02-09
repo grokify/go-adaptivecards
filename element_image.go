@@ -41,14 +41,6 @@ const (
 	ImageSizePerson            = "person"
 )
 
-type ISelectAction string
-
-const (
-	ISelectActionOpenURL          ISelectAction = "Action.OpenUrl"
-	ISelectActionSubmit                         = "Action.Submit"
-	ISelectActionToggleVisibility               = "Action.ToggleVisibility"
-)
-
 type Spacing string
 
 const (
