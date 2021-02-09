@@ -26,13 +26,6 @@ func (el ElementTextBlock) ElementID() string { return el.ID }
 
 func (el ElementTextBlock) FallbackOption() bool { return true }
 
-type BlockElementHeight string
-
-const (
-	BlockElementHeightAuto    BlockElementHeight = "auto"
-	BlockElementHeightStretch                    = "stretch"
-)
-
 type Color string
 
 const (
