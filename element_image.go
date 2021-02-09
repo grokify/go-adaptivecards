@@ -1,39 +1,28 @@
 package adaptivecards
 
 type ElementImage struct {
-	AltText             string                `json:"altText,omitempty"`
-	BackgroundColor     string                `json:"backgroundColor,omitempty"`
-	Fallback            ElementFallbackOption `json:"fallback,omitoption"`
-	Height              string                `json:"height,omitempty"`
-	HorizontalAlignment HorizontalAlignment   `json:"horizontalAlignment,omitempty"`
-	ID                  string                `json:"id,omitempty"`
-	IsVisible           bool                  `json:"isVisible"`
-	Requires            map[string]string     `json:"requires,omitempty"`
-	SelectAction        ISelectAction         `json:"selectAction,omitempty"`
-	Separator           bool                  `json:"separator,omitempty"`
-	Size                ImageSize             `json:"size,omitempty"`
-	Spacing             Spacing               `json:"spacing,omitempty"`
-	Style               ImageStyle            `json:"style,omitempty"`
-	Type                string                `json:"type"`
-	URL                 string                `json:"url,omitempty"`
-	Width               string                `json:"width,omitempty"`
+	AltText             string              `json:"altText,omitempty"`
+	BackgroundColor     string              `json:"backgroundColor,omitempty"`
+	Height              string              `json:"height,omitempty"`
+	HorizontalAlignment HorizontalAlignment `json:"horizontalAlignment,omitempty"`
+	SelectAction        ISelectAction       `json:"selectAction,omitempty"`
+	Size                ImageSize           `json:"size,omitempty"`
+	Style               ImageStyle          `json:"style,omitempty"`
+	Type                string              `json:"type"`
+	URL                 string              `json:"url,omitempty"`
+	Width               string              `json:"width,omitempty"`
+
+	Fallback  ElementOrFallbackOption `json:"fallback,omitoption"`
+	ID        string                  `json:"id,omitempty"`
+	IsVisible bool                    `json:"isVisible"`
+	Requires  map[string]string       `json:"requires,omitempty"`
+	Separator bool                    `json:"separator,omitempty"`
+	Spacing   Spacing                 `json:"spacing,omitempty"`
 }
 
-func (img ElementImage) ElementID() string {
-	return img.ID
-}
+func (el ElementImage) ElementID() string { return el.ID }
 
-func (img ElementImage) FallbackOption() bool {
-	return true
-}
-
-type HorizontalAlignment string
-
-const (
-	HorizontalAlignmentLeft   ImageSize = "left"
-	HorizontalAlignmentCenter           = "center"
-	HorizontalAlignmentRight            = "right"
-)
+func (el ElementImage) FallbackOption() bool { return true }
 
 type ImageSize string
 

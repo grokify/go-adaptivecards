@@ -4,7 +4,7 @@ type Element interface {
 	ElementID() string
 }
 
-type ElementFallbackOption interface {
+type ElementOrFallbackOption interface {
 	ElementID() string
 	FallbackOption() bool
 }
