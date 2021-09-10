@@ -14,13 +14,13 @@ const (
 type Colors string
 
 const (
-	ColorDefault   Colors = "default"
-	ColorDark             = "dark"
-	ColorLight            = "light"
-	ColorAccent           = "accent"
-	ColorGood             = "good"
-	ColorWarning          = "warning"
-	ColorAttention        = "attention"
+	ColorDefault   Colors = ""
+	ColorDark             = "Dark"
+	ColorLight            = "Light"
+	ColorAccent           = "Accent"
+	ColorGood             = "Good"
+	ColorWarning          = "Warning"
+	ColorAttention        = "Attention"
 )
 
 type FontSize string
