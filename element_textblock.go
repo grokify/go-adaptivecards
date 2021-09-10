@@ -8,8 +8,8 @@ type ElementTextBlock struct {
 	HorizontalAlignment HorizontalAlignment `json:"horizontalAlignment,omitempty"`
 	IsSubtle            bool                `json:"isSubtle,omitempty"`
 	MaxLines            int                 `json:"maxLines,omitempty"`
-	Size                FontSize            `json:"fontSize,omitempty"`
-	Weight              FontWeight          `json:"fontWeight,omitempty"`
+	Size                FontSize            `json:"size,omitempty"`
+	Weight              FontWeight          `json:"weight,omitempty"`
 	Wrap                bool                `json:"wrap,omitempty"`
 
 	Fallback  ElementOrFallbackOption `json:"fallback,omitempty"`

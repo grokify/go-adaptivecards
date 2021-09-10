@@ -26,11 +26,11 @@ const (
 type FontSize string
 
 const (
-	FontSizeDefault    FontType = "default"
-	FontSizeSmall               = "small"
-	FontSizeMedium              = "medium"
-	FontSizeLarge               = "large"
-	FontSizeExtraLarge          = "extraLarge"
+	FontSizeDefault    FontType = ""
+	FontSizeSmall               = "Small"
+	FontSizeMedium              = "Medium"
+	FontSizeLarge               = "Large"
+	FontSizeExtraLarge          = "ExtraLarge"
 )
 
 type FontType string
@@ -43,9 +43,9 @@ const (
 type FontWeight string
 
 const (
-	FontWeightDefault FontWeight = "default"
-	FontWeightLighter            = "lighter"
-	FontWeightBolder             = "bolder"
+	FontWeightDefault FontWeight = ""
+	FontWeightLighter            = "Lighter"
+	FontWeightBolder             = "Bolder"
 )
 
 type HorizontalAlignment string
