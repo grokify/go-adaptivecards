@@ -1,5 +1,9 @@
 package adaptivecards
 
+const (
+	TypeTextBlock = "TextBlock"
+)
+
 type BlockElementHeight string
 
 const (
