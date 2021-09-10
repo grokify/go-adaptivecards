@@ -23,7 +23,7 @@ The following have been implemented.
 - [x] Cards
   - [x] AdaptiveCard
 - [x] Card Elements
-  - [x] TextBlock
+  - [x] [TextBlock](https://adaptivecards.io/explorer/TextBlock.html)
   - [x] Image
   - [x] Media
   - [x] MediaSource
@@ -38,7 +38,7 @@ The following have been implemented.
   - [ ] Fact
   - [ ] ImageSet
 - [ ] Actions
-  - [x] Action.OpenUrl
+  - [x] [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html)
   - [ ] Action.Submit
   - [ ] Action.ShowCard
   - [ ] Action.ToggleVisibility
