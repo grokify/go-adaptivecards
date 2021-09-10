@@ -31,6 +31,12 @@ The following have been implemented.
   - [x] TextRun
 - [ ] Containers
 - [ ] Actions
+  - [x] Action.OpenUrl
+  - [ ] Action.Submit
+  - [ ] Action.ShowCard
+  - [ ] Action.ToggleVisibility
+  - [ ] TargetElement
+  - [ ] Action.Execute
 - [x] Inputs
   - [x] Input.Text
   - [x] Input.Numbers
