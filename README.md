@@ -30,6 +30,13 @@ The following have been implemented.
   - [x] RichTextBlock
   - [x] TextRun
 - [ ] Containers
+  - [ ] ActionSet
+  - [ ] Container
+  - [ ] ColumnSet
+  - [ ] Column
+  - [ ] FactSet
+  - [ ] Fact
+  - [ ] ImageSet
 - [ ] Actions
   - [x] Action.OpenUrl
   - [ ] Action.Submit
@@ -47,3 +54,7 @@ The following have been implemented.
   - [x] Input.Choice
 - [x] Types
   - [x] BackgroundImage
+  - [ ] Refresh
+  - [ ] Authentication
+  - [ ] TokenExchangeResource
+  - [ ] AuthCardButton
