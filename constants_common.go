@@ -8,58 +8,58 @@ type BlockElementHeight string
 
 const (
 	BlockElementHeightAuto    BlockElementHeight = "auto"
-	BlockElementHeightStretch                    = "stretch"
+	BlockElementHeightStretch BlockElementHeight = "stretch"
 )
 
 type Colors string
 
 const (
 	ColorDefault   Colors = ""
-	ColorDark             = "Dark"
-	ColorLight            = "Light"
-	ColorAccent           = "Accent"
-	ColorGood             = "Good"
-	ColorWarning          = "Warning"
-	ColorAttention        = "Attention"
+	ColorDark      Colors = "Dark"
+	ColorLight     Colors = "Light"
+	ColorAccent    Colors = "Accent"
+	ColorGood      Colors = "Good"
+	ColorWarning   Colors = "Warning"
+	ColorAttention Colors = "Attention"
 )
 
 type FontSize string
 
 const (
-	FontSizeDefault    FontType = ""
-	FontSizeSmall               = "Small"
-	FontSizeMedium              = "Medium"
-	FontSizeLarge               = "Large"
-	FontSizeExtraLarge          = "ExtraLarge"
+	FontSizeDefault    FontSize = ""
+	FontSizeSmall      FontSize = "Small"
+	FontSizeMedium     FontSize = "Medium"
+	FontSizeLarge      FontSize = "Large"
+	FontSizeExtraLarge FontSize = "ExtraLarge"
 )
 
 type FontType string
 
 const (
 	FontTypeDefault   FontType = "default"
-	FontTypeMonospace          = "monospace"
+	FontTypeMonospace FontType = "monospace"
 )
 
 type FontWeight string
 
 const (
 	FontWeightDefault FontWeight = ""
-	FontWeightLighter            = "Lighter"
-	FontWeightBolder             = "Bolder"
+	FontWeightLighter FontWeight = "Lighter"
+	FontWeightBolder  FontWeight = "Bolder"
 )
 
 type HorizontalAlignment string
 
 const (
 	HorizontalAlignmentLeft   ImageSize = "left"
-	HorizontalAlignmentCenter           = "center"
-	HorizontalAlignmentRight            = "right"
+	HorizontalAlignmentCenter ImageSize = "center"
+	HorizontalAlignmentRight  ImageSize = "right"
 )
 
 type ISelectAction string
 
 const (
 	ISelectActionOpenURL          ISelectAction = "Action.OpenUrl"
-	ISelectActionSubmit                         = "Action.Submit"
-	ISelectActionToggleVisibility               = "Action.ToggleVisibility"
+	ISelectActionSubmit           ISelectAction = "Action.Submit"
+	ISelectActionToggleVisibility ISelectAction = "Action.ToggleVisibility"
 )
