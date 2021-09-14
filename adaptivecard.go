@@ -29,7 +29,7 @@ func NewAdaptiveCard() AdaptiveCard {
 		Version: SchemaVersion13}
 }
 
-func (card *AdaptiveCard) Inflate() {
+func (card *AdaptiveCard) Inflate(makeVisible bool) {
 	if len(strings.TrimSpace(card.Type)) == 0 {
 		card.Type = TypeAdaptiveCard
 	}
@@ -38,5 +38,10 @@ func (card *AdaptiveCard) Inflate() {
 	}
 	if len(strings.TrimSpace(card.Version)) == 0 {
 		card.Version = SchemaVersion13
+	}
+	if makeVisible {
+		for i := range card.Body {
+			card.Body[i].SetVisibility(true)
+		}
 	}
 }

@@ -24,11 +24,6 @@ func ExampleCardBullets() ac.AdaptiveCard {
 			strIdx := modInt(strInc, len(strs))
 			textParts = append(textParts, fmt.Sprintf("%s %s", bullet, strs[strIdx]))
 			strInc++
-			if bullet == "1." {
-				bullet = "*"
-			} else {
-				bullet = "1."
-			}
 		}
 		card.Body = append(card.Body,
 			ac.ElementTextBlock{
@@ -36,8 +31,13 @@ func ExampleCardBullets() ac.AdaptiveCard {
 				Wrap: true,
 				Text: strings.Join(textParts, "\n"),
 			})
+		if bullet == "1." {
+			bullet = "*"
+		} else {
+			bullet = "1."
+		}
 	}
-	card.Inflate()
+	card.Inflate(true)
 	return card
 }
 

@@ -17,3 +17,7 @@ type ElementMedia struct {
 func (el ElementMedia) ElementID() string { return el.ID }
 
 func (el ElementMedia) FallbackOption() bool { return true }
+
+func (el ElementMedia) SetVisibility(visible bool) {
+	el.IsVisible = visible
+}

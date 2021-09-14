@@ -20,9 +20,15 @@ type ElementImage struct {
 	Spacing   Spacing                 `json:"spacing,omitempty"`
 }
 
+func (el ElementImage) GetType() string { return el.Type }
+
 func (el ElementImage) ElementID() string { return el.ID }
 
 func (el ElementImage) FallbackOption() bool { return true }
+
+func (el ElementImage) SetVisibility(visible bool) {
+	el.IsVisible = visible
+}
 
 type ImageSize string
 

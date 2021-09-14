@@ -22,6 +22,12 @@ type ElementTextBlock struct {
 	Width     string                  `json:"width,omitempty"`
 }
 
+func (el ElementTextBlock) GetType() string { return el.Type }
+
 func (el ElementTextBlock) ElementID() string { return el.ID }
 
 func (el ElementTextBlock) FallbackOption() bool { return true }
+
+func (el ElementTextBlock) SetVisibility(visible bool) {
+	el.IsVisible = visible
+}
