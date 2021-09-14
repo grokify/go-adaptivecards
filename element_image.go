@@ -34,27 +34,27 @@ type ImageSize string
 
 const (
 	ImageSizeAuto    ImageSize = "auto"
-	ImageSizeStretch           = "stretch"
-	ImageSizeSmall             = "small"
-	ImageSizeMedium            = "medium"
-	ImageSizeLarge             = "large"
+	ImageSizeStretch ImageSize = "stretch"
+	ImageSizeSmall   ImageSize = "small"
+	ImageSizeMedium  ImageSize = "medium"
+	ImageSizeLarge   ImageSize = "large"
 )
 
 type ImageStyle string
 
 const (
 	ImageSizeDefault ImageSize = "default"
-	ImageSizePerson            = "person"
+	ImageSizePerson  ImageSize = "person"
 )
 
 type Spacing string
 
 const (
 	SpacingDefault    Spacing = "default"
-	SpacingNone               = "none"
-	SpacingSmall              = "small"
-	SpacingMedium             = "medium"
-	SpacingLarge              = "large"
-	SpacingExtraLarge         = "extraLarge"
-	SpacingPadding            = "padding"
+	SpacingNone       Spacing = "none"
+	SpacingSmall      Spacing = "small"
+	SpacingMedium     Spacing = "medium"
+	SpacingLarge      Spacing = "large"
+	SpacingExtraLarge Spacing = "extraLarge"
+	SpacingPadding    Spacing = "padding"
 )
