@@ -41,7 +41,20 @@ func (card *AdaptiveCard) Inflate(makeVisible bool) {
 	}
 	if makeVisible {
 		for i := range card.Body {
-			card.Body[i].SetVisibility(true)
+			switch card.Body[i].GetType() {
+			case TypeImage:
+				elt := card.Body[i].(ElementImage)
+				elt.IsVisible = true
+				card.Body[i] = elt
+			case TypeMedia:
+				elt := card.Body[i].(ElementMedia)
+				elt.IsVisible = true
+				card.Body[i] = elt
+			case TypeTextBlock:
+				elt := card.Body[i].(ElementTextBlock)
+				elt.IsVisible = true
+				card.Body[i] = elt
+			}
 		}
 	}
 }
