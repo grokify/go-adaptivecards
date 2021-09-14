@@ -36,7 +36,7 @@ const (
 type FontType string
 
 const (
-	FontTypeDefault   FontType = "Default"
+	FontTypeDefault   FontType = ""
 	FontTypeMonospace FontType = "Monospace"
 )
 
