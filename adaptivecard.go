@@ -13,8 +13,8 @@ const (
 type AdaptiveCard struct {
 	Type         string    `json:"type"`
 	Version      string    `json:"version"`
-	Body         []Element `json:"body"`
-	Actions      []Action  `json:"actions"`
+	Body         []Element `json:"body,omitempty"`
+	Actions      []Action  `json:"actions,omitempty"`
 	FallbackText string    `json:"fallbackText,omitempty"`
 	Lang         string    `json:"lang,omitempty"`
 	MinHeight    string    `json:"minHeight,omitempty"`
