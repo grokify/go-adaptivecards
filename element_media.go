@@ -14,6 +14,8 @@ type ElementMedia struct {
 	Spacing   Spacing                 `json:"spacing,omitempty"`
 }
 
+func (el ElementMedia) GetType() string { return el.Type }
+
 func (el ElementMedia) ElementID() string { return el.ID }
 
 func (el ElementMedia) FallbackOption() bool { return true }
