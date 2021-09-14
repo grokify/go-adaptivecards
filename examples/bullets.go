@@ -22,7 +22,8 @@ func ExampleCardBullets() ac.AdaptiveCard {
 		textParts := []string{}
 		for i := 0; i < 3; i++ {
 			strIdx := modInt(strInc, len(strs))
-			textParts = append(textParts, fmt.Sprintf("%s %s", bullet, strs[strIdx]))
+			textParts = append(textParts, fmt.Sprintf(
+				"%s %s", bullet, strings.TrimSpace(strs[strIdx])))
 			strInc++
 		}
 		card.Body = append(card.Body,
