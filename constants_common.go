@@ -36,8 +36,8 @@ const (
 type FontType string
 
 const (
-	FontTypeDefault   FontType = "default"
-	FontTypeMonospace FontType = "monospace"
+	FontTypeDefault   FontType = "Default"
+	FontTypeMonospace FontType = "Monospace"
 )
 
 type FontWeight string
