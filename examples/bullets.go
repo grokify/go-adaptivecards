@@ -14,15 +14,21 @@ func ExampleCardBullets() ac.AdaptiveCard {
 	}
 	blocks := TestTextBlocks()
 	strs := LorusIpsumStrings(nil)
-	strIdx := 0
+	strInc := 0
+	bullet := "1."
 	for _, b := range blocks {
 		b.Text = FontString(b)
 		card.Body = append(card.Body, b)
 		textParts := []string{}
 		for i := 0; i < 3; i++ {
-			bullet := "1."
+			strIdx := modInt(strInc, len(strs))
 			textParts = append(textParts, fmt.Sprintf("%s %s", bullet, strs[strIdx]))
-			strIdx++
+			strInc++
+			if bullet == "1." {
+				bullet = "*"
+			} else {
+				bullet = "1."
+			}
 		}
 		card.Body = append(card.Body,
 			ac.ElementTextBlock{
@@ -70,3 +76,5 @@ func LorusIpsum() string {
     
     Sed semper leo gravida ante sollicitudin pharetra. Integer elementum malesuada augue ut mattis. Pellentesque tempus sapien eget velit aliquam molestie. Vestibulum vehicula fringilla risus vitae ornare. Nulla iaculis ex in ligula fringilla fringilla. Quisque scelerisque, mi at lacinia volutpat, erat justo egestas quam, sed posuere velit lorem rutrum nulla. Nunc dictum augue consequat massa egestas tincidunt. Integer in nisi velit. Integer in justo et lacus molestie maximus quis ut dui. Etiam molestie libero a ullamcorper pretium. Suspendisse non ornare odio. Nunc non tortor ultricies, pulvinar purus in, porta mi. Suspendisse tellus felis, lacinia et placerat ac, convallis non justo.`
 }
+
+func modInt(a, b int) int { return (a%b + b) % b }
