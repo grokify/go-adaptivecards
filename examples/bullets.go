@@ -18,6 +18,7 @@ func ExampleCardBullets() ac.AdaptiveCard {
 	bullet := "1."
 	for _, b := range blocks {
 		b.Text = FontString(b)
+		b.Wrap = true
 		card.Body = append(card.Body, b)
 		textParts := []string{}
 		for i := 0; i < 3; i++ {
