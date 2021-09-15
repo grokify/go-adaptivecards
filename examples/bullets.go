@@ -8,7 +8,27 @@ import (
 	ac "github.com/grokify/go-adaptivecards"
 )
 
-func ExampleCardBullets() ac.AdaptiveCard {
+func ExampleCardBullets(linePrefix string) ac.AdaptiveCard {
+	strs := LorusIpsumStrings(regexp.MustCompile(`\.`))
+	strs = strs[:10]
+	if len(linePrefix) > 0 {
+		for i := range strs {
+			strs[i] = linePrefix + strings.TrimSpace(strs[i])
+		}
+	}
+	card := ac.NewAdaptiveCard()
+	card.Body = append(card.Body,
+		ac.ElementTextBlock{
+			Type:      ac.TypeTextBlock,
+			Text:      strings.Join(strs, "\n"),
+			Wrap:      true,
+			IsVisible: true,
+		})
+	card.Inflate(true)
+	return card
+}
+
+func ExampleCardBulletsMulti() ac.AdaptiveCard {
 	card := ac.AdaptiveCard{
 		Body: []ac.Element{},
 	}
