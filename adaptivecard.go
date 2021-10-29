@@ -2,7 +2,7 @@ package adaptivecards
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -32,7 +32,7 @@ func NewAdaptiveCard() *AdaptiveCard {
 }
 
 func ReadFile(filename string) (*AdaptiveCard, error) {
-	bytes, err := ioutil.ReadFile(filename)
+	bytes, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, err
 	}
