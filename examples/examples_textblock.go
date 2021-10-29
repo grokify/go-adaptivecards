@@ -18,14 +18,14 @@ func TestTextBlocks() []ac.ElementTextBlock {
 			for _, weight := range weights {
 				for _, fontType := range types {
 					blocks = append(blocks, ac.ElementTextBlock{
-						Type:     ac.TypeTextBlock,
+						Type:     ac.ElementTypeTextBlock,
 						Size:     size,
 						Color:    color,
 						Weight:   weight,
 						FontType: fontType,
 						IsSubtle: false})
 					blocks = append(blocks, ac.ElementTextBlock{
-						Type:     ac.TypeTextBlock,
+						Type:     ac.ElementTypeTextBlock,
 						Size:     size,
 						Color:    color,
 						Weight:   weight,

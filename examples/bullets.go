@@ -19,7 +19,7 @@ func ExampleCardBullets(linePrefix string) ac.AdaptiveCard {
 	card := ac.NewAdaptiveCard()
 	card.Body = append(card.Body,
 		ac.ElementTextBlock{
-			Type:      ac.TypeTextBlock,
+			Type:      ac.ElementTypeTextBlock,
 			Text:      strings.Join(strs, "\n"),
 			Wrap:      true,
 			IsVisible: true,
@@ -49,7 +49,7 @@ func ExampleCardBulletsMulti() ac.AdaptiveCard {
 		}
 		card.Body = append(card.Body,
 			ac.ElementTextBlock{
-				Type: ac.TypeTextBlock,
+				Type: ac.ElementTypeTextBlock,
 				Wrap: true,
 				Text: strings.Join(textParts, "\n"),
 			})

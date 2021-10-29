@@ -11,15 +11,15 @@ const (
 )
 
 type AdaptiveCard struct {
-	Type         string    `json:"type"`
-	Version      string    `json:"version"`
-	Body         []Element `json:"body,omitempty"`
-	Actions      []Action  `json:"actions,omitempty"`
-	FallbackText string    `json:"fallbackText,omitempty"`
-	Lang         string    `json:"lang,omitempty"`
-	MinHeight    string    `json:"minHeight,omitempty"`
-	Schema       string    `json:"$schema,omitempty"`
-	Speak        string    `json:"speak,omitempty"`
+	Type         string   `json:"type"`
+	Version      string   `json:"version"`
+	Body         Elements `json:"body,omitempty"`
+	Actions      []Action `json:"actions,omitempty"`
+	FallbackText string   `json:"fallbackText,omitempty"`
+	Lang         string   `json:"lang,omitempty"`
+	MinHeight    string   `json:"minHeight,omitempty"`
+	Schema       string   `json:"$schema,omitempty"`
+	Speak        string   `json:"speak,omitempty"`
 }
 
 func NewAdaptiveCard() AdaptiveCard {
@@ -42,15 +42,15 @@ func (card *AdaptiveCard) Inflate(makeVisible bool) {
 	if makeVisible {
 		for i := range card.Body {
 			switch card.Body[i].GetType() {
-			case TypeImage:
+			case ElementTypeImage:
 				elt := card.Body[i].(ElementImage)
 				elt.IsVisible = true
 				card.Body[i] = elt
-			case TypeMedia:
+			case ElementTypeMedia:
 				elt := card.Body[i].(ElementMedia)
 				elt.IsVisible = true
 				card.Body[i] = elt
-			case TypeTextBlock:
+			case ElementTypeTextBlock:
 				elt := card.Body[i].(ElementTextBlock)
 				elt.IsVisible = true
 				card.Body[i] = elt
