@@ -1,6 +1,8 @@
 package adaptivecards
 
 import (
+	"encoding/json"
+	"os"
 	"strings"
 )
 
@@ -22,11 +24,24 @@ type AdaptiveCard struct {
 	Speak        string   `json:"speak,omitempty"`
 }
 
-func NewAdaptiveCard() AdaptiveCard {
-	return AdaptiveCard{
+func NewAdaptiveCard() *AdaptiveCard {
+	return &AdaptiveCard{
 		Type:    TypeAdaptiveCard,
 		Schema:  SchemaURL,
 		Version: SchemaVersion13}
+}
+
+func ReadFile(filename string) (*AdaptiveCard, error) {
+	bytes, err := os.ReadFile(filename)
+	if err != nil {
+		return nil, err
+	}
+	return Parse(bytes)
+}
+
+func Parse(card []byte) (*AdaptiveCard, error) {
+	ac := NewAdaptiveCard()
+	return ac, json.Unmarshal(card, ac)
 }
 
 func (card *AdaptiveCard) Inflate(makeVisible bool) {
