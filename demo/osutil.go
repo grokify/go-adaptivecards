@@ -3,7 +3,7 @@ package demo
 import (
 	"encoding/json"
 	"io/fs"
-	"os"
+	"io/ioutil"
 )
 
 // WriteJsonFiles is a helper that marshals data two rote both
@@ -14,7 +14,7 @@ func WriteJsonFiles(filename, filenameIndent, prefix, indent string, data interf
 		if err != nil {
 			return err
 		}
-		err = os.WriteFile(filename, bytesMin, perm)
+		err = ioutil.WriteFile(filename, bytesMin, perm)
 		if err != nil {
 			return err
 		}
@@ -24,7 +24,7 @@ func WriteJsonFiles(filename, filenameIndent, prefix, indent string, data interf
 		if err != nil {
 			return err
 		}
-		err = os.WriteFile(filenameIndent, bytesIndent, perm)
+		err = ioutil.WriteFile(filenameIndent, bytesIndent, perm)
 		if err != nil {
 			return err
 		}
