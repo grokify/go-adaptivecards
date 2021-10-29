@@ -1,0 +1,13 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit\n Aliquam ac erat sollicitudin, fermentum felis id, hendrerit dui\n In hac habitasse platea dictumst\n In pulvinar pharetra dui vel aliquet\n Vivamus convallis libero ut sapien gravida efficitur\n Ut laoreet malesuada bibendum\n Duis et ultricies turpis\n Phasellus ac lacinia massa, eu fringilla massa\n Cras non est mi\n Etiam eget scelerisque arcu, id pharetra velit",
+      "wrap": true,
+      "isVisible": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
