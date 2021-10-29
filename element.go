@@ -29,35 +29,34 @@ func (els *Elements) UnmarshalJSON(data []byte) error {
 	} else if string(data) == "[]" {
 		return nil
 	}
-	els1 := []interface{}{}
+	els1 := []map[string]interface{}{}
 	els2 := []Element{}
 
 	err := json.Unmarshal(data, &els1)
 	if err != nil {
 		return err
 	}
-	for _, el := range els1 {
-		elMap := el.(map[string]interface{})
-		elType, ok := elMap["type"]
+	for _, elMSI := range els1 {
+		elType, ok := elMSI["type"]
 		if !ok {
 			return errors.New("element `type` property is missing or empty")
 		}
 		elTypeString := elType.(string)
 		switch strings.TrimSpace(elTypeString) {
 		case ElementTypeTextBlock:
-			el2, err := interfaceToTextBlock(el)
+			el2, err := interfaceToTextBlock(elMSI)
 			if err != nil {
 				return errors.New("cannot parse type=`TextBlock`:" + err.Error())
 			}
 			els2 = append(els2, el2)
 		case ElementTypeImage:
-			el2, err := interfaceToImage(el)
+			el2, err := interfaceToImage(elMSI)
 			if err != nil {
 				return errors.New("cannot parse type=`Image`:" + err.Error())
 			}
 			els2 = append(els2, el2)
 		case ElementTypeMedia:
-			el2, err := interfaceToMedia(el)
+			el2, err := interfaceToMedia(elMSI)
 			if err != nil {
 				return errors.New("cannot parse type=`Media`:" + err.Error())
 			}
@@ -70,11 +69,7 @@ func (els *Elements) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-type elementInspect struct {
-	Type string `json:"type"`
-}
-
-func interfaceToTextBlock(data interface{}) (ElementTextBlock, error) {
+func interfaceToTextBlock(data map[string]interface{}) (ElementTextBlock, error) {
 	el := ElementTextBlock{}
 	j, err := json.Marshal(data)
 	if err != nil {
@@ -83,7 +78,7 @@ func interfaceToTextBlock(data interface{}) (ElementTextBlock, error) {
 	return el, json.Unmarshal(j, &el)
 }
 
-func interfaceToImage(data interface{}) (ElementImage, error) {
+func interfaceToImage(data map[string]interface{}) (ElementImage, error) {
 	el := ElementImage{}
 	j, err := json.Marshal(data)
 	if err != nil {
@@ -92,7 +87,7 @@ func interfaceToImage(data interface{}) (ElementImage, error) {
 	return el, json.Unmarshal(j, &el)
 }
 
-func interfaceToMedia(data interface{}) (ElementMedia, error) {
+func interfaceToMedia(data map[string]interface{}) (ElementMedia, error) {
 	el := ElementMedia{}
 	j, err := json.Marshal(data)
 	if err != nil {
