@@ -1,4 +1,4 @@
-package examples
+package demo
 
 import (
 	ac "github.com/grokify/go-adaptivecards"
