@@ -12,7 +12,7 @@ type ElementImage struct {
 	URL                 string              `json:"url,omitempty"`
 	Width               string              `json:"width,omitempty"`
 
-	Fallback  ElementOrFallbackOption `json:"fallback,omitoption"`
+	Fallback  ElementOrFallbackOption `json:"fallback,omitempty"`
 	ID        string                  `json:"id,omitempty"`
 	IsVisible bool                    `json:"isVisible"`
 	Requires  map[string]string       `json:"requires,omitempty"`

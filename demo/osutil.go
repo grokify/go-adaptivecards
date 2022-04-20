@@ -6,9 +6,9 @@ import (
 	"os"
 )
 
-// WriteJsonFiles is a helper that marshals data two rote both
+// WriteJSONFiles is a helper that marshals data two rote both
 // minimized and indented JSON files.
-func WriteJsonFiles(filename, filenameIndent, prefix, indent string, data interface{}, perm fs.FileMode) error {
+func WriteJSONFiles(filename, filenameIndent, prefix, indent string, data interface{}, perm fs.FileMode) error {
 	if len(filename) > 0 {
 		bytesMin, err := json.Marshal(data)
 		if err != nil {

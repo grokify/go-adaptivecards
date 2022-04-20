@@ -6,7 +6,7 @@ type ElementMedia struct {
 	Poster  string               `json:"poster,omitempty"`
 	Sources []ElementMediaSource `json:"sources,omitempty"`
 
-	Fallback  ElementOrFallbackOption `json:"fallback,omitoption"`
+	Fallback  ElementOrFallbackOption `json:"fallback,omitempty"`
 	Height    BlockElementHeight      `json:"height,omitempty"`
 	ID        string                  `json:"id,omitempty"`
 	IsVisible bool                    `json:"isVisible"`
