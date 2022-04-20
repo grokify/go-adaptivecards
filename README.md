@@ -21,40 +21,42 @@ Golang implementation of [AdaptiveCards](https://adaptivecards.io/).
 The following have been implemented.
 
 - [x] Cards
-  - [x] AdaptiveCard
+  - [x] [AdaptiveCard](https://adaptivecards.io/explorer/AdaptiveCard.html)
 - [x] Card Elements
   - [x] [TextBlock](https://adaptivecards.io/explorer/TextBlock.html)
-  - [x] Image
-  - [x] Media
-  - [x] MediaSource
-  - [x] RichTextBlock
-  - [x] TextRun
+  - [x] [Image](https://adaptivecards.io/explorer/Image.html)
+  - [x] [Media](https://adaptivecards.io/explorer/Media.html)
+  - [x] [MediaSource](https://adaptivecards.io/explorer/MediaSource.html)
+  - [x] [RichTextBlock](https://adaptivecards.io/explorer/RichTextBlock.html)
+  - [x] [TextRun](https://adaptivecards.io/explorer/TextRun.html)
 - [ ] Containers
-  - [ ] ActionSet
-  - [ ] Container
-  - [ ] ColumnSet
-  - [ ] Column
-  - [ ] FactSet
-  - [ ] Fact
-  - [ ] ImageSet
+  - [ ] [ActionSet](https://adaptivecards.io/explorer/ActionSet.html)
+  - [ ] [Container](https://adaptivecards.io/explorer/Container.html)
+  - [ ] [ColumnSet](https://adaptivecards.io/explorer/ColumnSet.html)
+  - [ ] [Column](https://adaptivecards.io/explorer/Column.html)
+  - [ ] [FactSet](https://adaptivecards.io/explorer/FactSet.html)
+  - [ ] [Fact](https://adaptivecards.io/explorer/Fact.html)
+  - [ ] [ImageSet](https://adaptivecards.io/explorer/ImageSet.html)
+  - [ ] [Table](https://adaptivecards.io/explorer/Table.html)
+  - [ ] [TableCell](https://adaptivecards.io/explorer/TableCell.html)
 - [ ] Actions
   - [x] [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html)
-  - [ ] Action.Submit
-  - [ ] Action.ShowCard
-  - [ ] Action.ToggleVisibility
-  - [ ] TargetElement
-  - [ ] Action.Execute
+  - [ ] [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html)
+  - [ ] [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html)
+  - [ ] [Action.ToggleVisibility](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
+  - [ ] [TargetElement](https://adaptivecards.io/explorer/TargetElement.html)
+  - [ ] [Action.Execute](https://adaptivecards.io/explorer/Action.Execute.html)
 - [x] Inputs
-  - [x] Input.Text
-  - [x] Input.Numbers
-  - [x] Input.Date
-  - [x] Input.Time
-  - [x] Input.Toggle
-  - [x] Input.ChoiceSet
-  - [x] Input.Choice
+  - [x] [Input.Text](https://adaptivecards.io/explorer/Input.Text.html)
+  - [x] [Input.Number](https://adaptivecards.io/explorer/Input.Number.html)
+  - [x] [Input.Date](https://adaptivecards.io/explorer/Input.Date.html)
+  - [x] [Input.Time](https://adaptivecards.io/explorer/Input.Time.html)
+  - [x] [Input.Toggle](https://adaptivecards.io/explorer/Input.Toggle.html)
+  - [x] [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html)
+  - [x] [Input.Choice](https://adaptivecards.io/explorer/Input.Choice.html)
 - [x] Types
-  - [x] BackgroundImage
-  - [ ] Refresh
-  - [ ] Authentication
-  - [ ] TokenExchangeResource
-  - [ ] AuthCardButton
+  - [x] [BackgroundImage](https://adaptivecards.io/explorer/BackgroundImage.html)
+  - [ ] [Refresh](https://adaptivecards.io/explorer/Refresh.html)
+  - [ ] [Authentication](https://adaptivecards.io/explorer/Authentication.html)
+  - [ ] [TokenExchangeResource](https://adaptivecards.io/explorer/TokenExchangeResource.html)
+  - [ ] [AuthCardButton](https://adaptivecards.io/explorer/AuthCardButton.html)
