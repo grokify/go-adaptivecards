@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	err := demo.WriteJsonFiles(
+	err := demo.WriteJSONFiles(
 		"example_card_bullets_min.json",
 		"example_card_bullets.json", "", "  ",
 		demo.ExampleCardBullets(""), 0644)
@@ -16,7 +16,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = demo.WriteJsonFiles(
+	err = demo.WriteJSONFiles(
 		"example_card_bullets-multi_min.json",
 		"example_card_bullets-mult.json", "", "  ",
 		demo.ExampleCardBulletsMulti(), 0644)
