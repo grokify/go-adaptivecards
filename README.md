@@ -7,7 +7,7 @@
 
 Golang implementation of [AdaptiveCards](https://adaptivecards.io/).
 
- [build-status-svg]: https://github.com/grokify/go-adaptivecards/workflows/go%20build/badge.svg?branch=master
+ [build-status-svg]: https://github.com/grokify/go-adaptivecards/workflows/test/badge.svg?branch=master
  [build-status-url]: https://github.com/grokify/go-adaptivecards/actions
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/go-adaptivecards
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/go-adaptivecards
