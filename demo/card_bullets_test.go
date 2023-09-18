@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/grokify/go-adaptivecards"
+	adaptivecards "github.com/grokify/go-adaptivecards"
 )
 
 var cardTests = []struct {
