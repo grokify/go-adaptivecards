@@ -17,9 +17,9 @@ var adaptiveCardTest = AdaptiveCard{
 }
 
 var elementImageTests = []struct {
-	card    AdaptiveCard `json:"adaptiveCard"`
-	element Element      `json:"element"`
-	image   ElementImage `json:"image"`
+	card    AdaptiveCard // `json:"adaptiveCard"`
+	element Element      // `json:"element"`
+	image   ElementImage // `json:"image"`
 	id      string
 }{
 	{
